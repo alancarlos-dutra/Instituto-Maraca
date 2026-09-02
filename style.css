@@ -149,6 +149,65 @@ body {
 
 }
 
+/* ===== ÁREAS DE ATUAÇÃO ===== */
+.atuacao-section {
+    margin: 1rem 0 4rem;
+    padding: 2rem 0 0;
+    border-top: 1px solid rgba(40, 50, 50, 0.08);
+}
+
+.atuacao-heading h2 {
+    font-size: 2.3rem;
+    font-weight: 600;
+    color: #1a2829;
+    letter-spacing: -0.01em;
+}
+
+.atuacao-heading h2 span {
+    font-weight: 300;
+    color: #D92A1A;
+}
+
+.atuacao-heading p {
+    color: #167351;
+    margin-top: 0.2rem;
+}
+
+.atuacao-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1rem;
+    margin-top: 1.6rem;
+}
+
+.atuacao-item {
+    padding: 1.35rem 1.4rem 1.45rem;
+    background-color: rgba(23, 111, 166, 0.08);
+    border-left: 4px solid #F29A2E;
+}
+
+.atuacao-item img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.atuacao-item h3 {
+    color: #176FA6;
+    font-size: 1.2rem;
+    line-height: 1.25;
+    margin-bottom: 0.55rem;
+}
+
+.atuacao-item p {
+    color: #2f4648;
+    font-size: 0.96rem;
+    line-height: 1.6;
+}
+
 /* ===== TÍTULO SEÇÃO SISTEMAS ===== */
 .section-title {
     margin: 4rem 0 2rem 0;
@@ -327,10 +386,12 @@ body {
     .contato-grid { grid-template-columns: 1fr; }
     .hero h1 { font-size: 2.2rem; }
     .section-title h2 { font-size: 2rem; }
+    .atuacao-heading h2 { font-size: 2rem; }
 }
 
 @media (max-width: 480px) {
     .logo-area { min-height: 120px; }
     .nav-menu { gap: 0.8rem; }
     .hero h1 { font-size: 1.8rem; }
+    .atuacao-heading h2 { font-size: 1.8rem; }
 }
