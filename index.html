@@ -28,10 +28,18 @@
 
         <!-- MENU -->
         <nav class="nav-menu">
-            <a href="#">Home</a>
-            <a href="#trabalhos">Portal da Transparência</a>
-            <a href="#sobre">Sobre</a>
-            <a href="#contato" class="menu-destaque">Contato</a>
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-links">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span class="sr-only">Abrir menu</span>
+            </button>
+            <div class="menu-links" id="menu-links">
+                <a href="#">Home</a>
+                <a href="#trabalhos">Portal da Transparência</a>
+                <a href="#sobre">Sobre</a>
+                <a href="#contato" class="menu-destaque">Contato</a>
+            </div>
         </nav>
 
         <!-- HERO / BEM-VINDO -->
@@ -166,5 +174,16 @@
 
     </div>
     <!-- fim container -->
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const menuLinks = document.querySelector('#menu-links');
+
+        menuToggle.addEventListener('click', () => {
+            const isOpen = menuToggle.getAttribute('aria-expanded') === 'true';
+            menuToggle.setAttribute('aria-expanded', String(!isOpen));
+            menuToggle.querySelector('.sr-only').textContent = isOpen ? 'Abrir menu' : 'Fechar menu';
+            menuLinks.classList.toggle('is-open', !isOpen);
+        });
+    </script>
 </body>
 </html>
