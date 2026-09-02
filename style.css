@@ -1,0 +1,336 @@
+/* ===== RESET & BASE ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #FAF2E5;
+    font-family: 'Segoe UI', Roboto, system-ui, -apple-system, sans-serif;
+    color: #1e2b2c;
+    line-height: 1.5;
+    padding: 0 2rem;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 1.5rem 1.5rem 3rem;
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.02);
+}
+
+/* ===== HEADER / TOPO ===== */
+.top-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.logo-area {
+    flex: 1 1 380px;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    padding: 1rem 1.2rem;
+}
+
+.logo-area img {
+    display: block;
+    width: 50%;
+    height: auto;
+}
+
+.info-side {
+    flex: 1 1 260px;
+    background-color: #176FA6;
+    border-radius: 20px;
+    transform: scale(0.75);
+    padding: 1.8rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.02);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.info-side h2 {
+    font-size: 2.8rem;
+    font-weight: 600;
+    color: #FAF2E5;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.3rem;
+}
+
+.info-side .destaque {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #F29A2E;
+    margin-bottom: 0.5rem;
+}
+
+.info-side p {
+    font-size: 1.2rem;
+    color: #FAF2E5;
+    margin-bottom: 0.8rem;
+}
+
+/* ===== MENU ===== */
+.nav-menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2.5rem 1.8rem;
+    padding: 1rem 0 0.8rem 0;
+    margin-bottom: 0.8rem;
+    border-bottom: 1px solid rgba(40, 50, 50, 0.08);
+}
+
+.nav-menu a {
+    text-decoration: none;
+    font-weight: 500;
+    color: #176FA6;
+    font-size: 1rem;
+    letter-spacing: 0.3px;
+    transition: color 0.1s;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 0.3rem;
+}
+
+.nav-menu a:hover {
+    color: #D92A1A;
+    border-bottom-color: #D92A1A;
+}
+
+.nav-menu .menu-destaque {
+    background-color: #D92A1A;
+    color: #FAF2E5;
+    padding: 0.5rem 1.4rem;
+    border-radius: 40px;
+    border-bottom: none;
+    font-weight: 600;
+}
+
+.nav-menu .menu-destaque:hover {
+    background-color: #F29A2E;
+    color: white;
+    border-bottom: none;
+}
+
+/* ===== HERO ===== */
+.hero {
+    margin: 1.8rem 0 3.5rem 0;
+    padding: 1rem 0 0.5rem 0;
+}
+
+.hero h1 {
+    font-size: 2.8rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: #167351;
+}
+
+.hero h1 small {
+    font-weight: 300;
+    font-size: 1.8rem;
+    color: #176FA6;
+}
+
+.hero .tagline {
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: #2b4143;
+    margin: 0.5rem 0 0.8rem 0;
+    max-width: 700px;
+    text-align: justify;
+
+}
+
+/* ===== TÍTULO SEÇÃO SISTEMAS ===== */
+.section-title {
+    margin: 4rem 0 2rem 0;
+}
+
+.section-title h2 {
+    font-size: 2.3rem;
+    font-weight: 600;
+    color: #1a2829;
+    letter-spacing: -0.01em;
+}
+
+.section-title h2 span {
+    font-weight: 300;
+    color: #D92A1A;
+}
+
+.section-title .sub {
+    font-size: 1rem;
+    color: #167351;
+    margin-top: 0.2rem;
+    letter-spacing: 0.3px;
+}
+
+/* ===== CARDS ===== */
+.sistemas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0 3rem;
+}
+
+.card-sistema {
+    background-color: #e5dace;
+    border-radius: 28px;
+    padding: 2rem 1.8rem 2.2rem;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.02);
+    transition: 0.15s ease;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    display: flex;
+    flex-direction: column;
+}
+
+.card-sistema:hover {
+    background-color: #e1d4c6;
+    transform: translateY(-3px);
+}
+
+.card-imagem {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 16px;
+    margin-bottom: 1.2rem;
+}
+
+.card-sistema .card-titulo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #176FA6;
+    display: flex;
+    align-items: baseline;
+    gap: 0.3rem;
+    flex-wrap: wrap;
+}
+
+.card-sistema .card-titulo .deltabit {
+    font-weight: 300;
+    color: #F29A2E;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+}
+
+.card-sistema .card-sub {
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: #167351;
+    margin: 0.2rem 0 0.6rem 0;
+}
+
+.card-sistema p {
+    color: #2a4042;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0.5rem 0 1.2rem 0;
+    flex: 1;
+}
+
+/* ===== SOBRE ===== */
+.sobre-wrapper {
+    margin: 3rem 0 1rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(40, 50, 50, 0.08);
+    text-align:justify;
+}
+
+.sobre-grid {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+
+.sobre-texto {
+    flex: 2 1 300px;
+}
+
+.sobre-texto h3 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #176FA6;
+}
+
+.sobre-texto h3 small {
+    font-weight: 300;
+    font-size: 1.4rem;
+    color: #D92A1A;
+}
+
+.sobre-texto p {
+    color: #2f4648;
+    font-size: 1rem;
+    max-width: 500px;
+    margin-top: 0.3rem;
+}
+
+.contato-section {
+    margin-top: 2.5rem;
+    padding: 1.8rem 0 0;
+    border-top: 1px solid rgba(40, 50, 50, 0.08);
+}
+
+.contato-heading h3 {
+    color: #176FA6;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.contato-heading p {
+    color: #2f4648;
+    margin-top: 0.3rem;
+}
+
+.contato-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1.4rem;
+}
+
+.contato-item {
+    border-left: 4px solid #F29A2E;
+    background-color: rgba(23, 111, 166, 0.08);
+    padding: 1rem 1.2rem;
+}
+
+.contato-item h4 {
+    color: #167351;
+    font-size: 1rem;
+}
+
+.contato-item p {
+    color: #2f4648;
+    font-size: 0.9rem;
+    margin-top: 0.35rem;
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 800px) {
+    body { padding: 0 1rem; }
+    .top-header { flex-direction: column; }
+    .logo-area { min-height: 160px; flex: 1 1 auto; }
+    .info-side { flex: 1 1 auto; }
+    .contato-grid { grid-template-columns: 1fr; }
+    .hero h1 { font-size: 2.2rem; }
+    .section-title h2 { font-size: 2rem; }
+}
+
+@media (max-width: 480px) {
+    .logo-area { min-height: 120px; }
+    .nav-menu { gap: 0.8rem; }
+    .hero h1 { font-size: 1.8rem; }
+}
