@@ -11,6 +11,7 @@ body {
     color: #1e2b2c;
     line-height: 1.5;
     padding: 0 2rem;
+    overflow-x: hidden;
 }
 
 .container {
@@ -39,7 +40,7 @@ body {
 
 .logo-area img {
     display: block;
-    width: 50%;
+    width: min(100%, 360px);
     height: auto;
 }
 
@@ -47,7 +48,6 @@ body {
     flex: 1 1 260px;
     background-color: #176FA6;
     border-radius: 20px;
-    transform: scale(0.75);
     padding: 1.8rem 2rem;
     display: flex;
     flex-direction: column;
@@ -131,6 +131,7 @@ body {
     font-weight: 600;
     letter-spacing: -0.02em;
     color: #167351;
+    overflow-wrap: anywhere;
 }
 
 .hero h1 small {
@@ -146,7 +147,7 @@ body {
     margin: 0.5rem 0 0.8rem 0;
     max-width: 700px;
     text-align: justify;
-
+    overflow-wrap: anywhere;
 }
 
 /* ===== ÁREAS DE ATUAÇÃO ===== */
@@ -206,6 +207,7 @@ body {
     color: #2f4648;
     font-size: 0.96rem;
     line-height: 1.6;
+    overflow-wrap: anywhere;
 }
 
 /* ===== TÍTULO SEÇÃO SISTEMAS ===== */
@@ -295,6 +297,7 @@ body {
     line-height: 1.6;
     margin: 0.5rem 0 1.2rem 0;
     flex: 1;
+    overflow-wrap: anywhere;
 }
 
 /* ===== SOBRE ===== */
@@ -375,23 +378,45 @@ body {
     color: #2f4648;
     font-size: 0.9rem;
     margin-top: 0.35rem;
+    overflow-wrap: anywhere;
 }
 
 /* ===== RESPONSIVO ===== */
 @media (max-width: 800px) {
-    body { padding: 0 1rem; }
+    body { padding: 0 0.75rem; }
+    .container { padding: 1rem 0.75rem 2rem; }
     .top-header { flex-direction: column; }
-    .logo-area { min-height: 160px; flex: 1 1 auto; }
+    .logo-area {
+        min-height: auto;
+        flex: 1 1 auto;
+        justify-content: center;
+        padding: 0.75rem;
+    }
+    .logo-area img { width: min(100%, 300px); }
     .info-side { flex: 1 1 auto; }
     .contato-grid { grid-template-columns: 1fr; }
+    .atuacao-grid,
+    .sistemas-grid { grid-template-columns: 1fr; }
     .hero h1 { font-size: 2.2rem; }
     .section-title h2 { font-size: 2rem; }
     .atuacao-heading h2 { font-size: 2rem; }
 }
 
 @media (max-width: 480px) {
-    .logo-area { min-height: 120px; }
-    .nav-menu { gap: 0.8rem; }
+    .top-header { gap: 1rem; margin-bottom: 1.5rem; }
+    .info-side { padding: 1.25rem; }
+    .info-side h2 { font-size: 2rem; }
+    .info-side .destaque { font-size: 1.15rem; }
+    .info-side p { font-size: 1rem; }
+    .nav-menu { gap: 0.8rem 1rem; }
+    .nav-menu a { font-size: 0.9rem; }
+    .nav-menu .menu-destaque { padding: 0.45rem 1rem; }
+    .hero { margin-bottom: 2rem; }
     .hero h1 { font-size: 1.8rem; }
+    .hero .tagline { font-size: 1.05rem; text-align: left; }
     .atuacao-heading h2 { font-size: 1.8rem; }
+    .atuacao-section { margin-bottom: 2.5rem; }
+    .atuacao-item { padding: 1rem; }
+    .section-title { margin-top: 2.5rem; }
+    .card-sistema { padding: 1.25rem; border-radius: 18px; }
 }
